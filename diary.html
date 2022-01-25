@@ -116,11 +116,14 @@
                                         </div>
                                     </div>
 
-
                                     <div class="mid_button_box">
-                                        <button class="diary_button">
+                                        <button class="diary_button" onclick="getTextFile()">
                                             <i class="fas fa-lock"></i>sun1의 비밀일기 보기
                                         </button>
+                                    </div>
+                                    <div class="mid_diary_inner" id="secret_box">
+                                        <div class="mid_diary_date">sun1의 비밀 일기</div>
+                                        <div class="diary_text font-kyobohand" id="secret_diary"></div>
                                     </div>
                                 </div>                              
                             </div>                        
@@ -135,5 +138,25 @@
                 </div>
             </div>
         </div>
+        <script>
+            function getTextFile() {
+                var input = document.createElement("input");
+                input.type = "file";
+                input.accept = "text/plain";
+                input.onchange = function (event) {
+                processFile(event.target.files[0]);
+                };
+                input.click();
+            }
+            function processFile(file) {
+                var reader = new FileReader();
+                reader.readAsText(file, "utf-8");
+
+                reader.onload = function () {
+                document.getElementById("secret_diary").innerText = reader.result;
+                document.getElementById("secret_box").style.display = "block";
+                };
+            }
+        </script>
     </body>
 </html>

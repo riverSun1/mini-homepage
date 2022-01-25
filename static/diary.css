@@ -94,3 +94,28 @@
     color: rgb(60, 109, 141);
     font-weight: 1000;
 }
+
+#secret_box {
+    display: none;
+  }
+
+.secret_diary:hover{
+    background-color: rgb(56, 158, 133);
+    border: none;
+}
+
+.secret_diary{
+    background-color: rgb(255, 255, 255);
+    color: white;
+    margin: 0 auto;
+    height: 50px;
+    border: none;
+    font-family: 'NeoDunggeunmo';
+    font-size: 14px;
+    margin: auto; 
+    display: block;
+}
+
+.diary_text{
+    text-align: center;
+}
