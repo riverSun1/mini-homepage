@@ -13,6 +13,7 @@
     margin-bottom: 13px;
     display: flex;
     flex-direction: row;
+    background-color: #e0dcdf;
 }
 
 
@@ -33,6 +34,7 @@
     border: 1px solid rgb(175, 174, 174);
     padding: 22px;
     margin-bottom: 21px;
+    background-color: #f8edf5;
 }
 
 
@@ -91,7 +93,7 @@
 }
 
 .mid_diary_date{
-    color: rgb(60, 109, 141);
+    color: #d620af;
     font-weight: 1000;
 }
 
